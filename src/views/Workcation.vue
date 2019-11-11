@@ -28,80 +28,9 @@
         <h2 class="text-2xl text-gray-900">Popular destinations</h2>
         <p class="mt-1 text-gray-600">A selection of great work-friendly cities with lots to see and explore.</p>
         <div class="flex flex-wrap -mx-4">
-          
-          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-              <img class="h-32 w-32 flex-shrink-0" src="/img/toronto.jpg" alt="Toronto">
-              <div class="px-6 py-4">
-                <h3 class="text-lg font-semibold text-green-800">Toronto</h3>
-                <p class="text-gray-600">$120 / night average</p>
-                <div class="mt-4">
-                  <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">Explore 43 properties</a>
-                </div>
-              </div>
-            </div>
+          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="destination in destinations" :key="destination.city">
+            <DestinationCard :destination='destination' />
           </div>
-          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-              <img class="h-32 w-32 flex-shrink-0" src="/img/malibu.jpg" alt="Malibu">
-              <div class="px-6 py-4">
-                <h3 class="text-lg font-semibold text-green-800">Malibu</h3>
-                <p class="text-gray-600">$75 / night average</p>
-                <div class="mt-4">
-                  <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">Explore 61 properties</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-              <img class="h-32 w-32 flex-shrink-0" src="/img/seattle.jpg" alt="Seattle">
-              <div class="px-6 py-4">
-                <h3 class="text-lg font-semibold text-green-800">Seattle</h3>
-                <p class="text-gray-600">$46 / night average</p>
-                <div class="mt-4">
-                  <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">Explore 15 properties</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-              <img class="h-32 w-32 flex-shrink-0" src="/img/colorado.jpeg" alt="Colorado">
-              <div class="px-6 py-4">
-                <h3 class="text-lg font-semibold text-green-800">Colorado</h3>
-                <p class="text-gray-600">$80 / night average</p>
-                <div class="mt-4">
-                  <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">Explore 80 properties</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-              <img class="h-32 w-32 flex-shrink-0" src="/img/tokyo.jpg" alt="Tokyo">
-              <div class="px-6 py-4">
-                <h3 class="text-lg font-semibold text-green-800">Tokyo</h3>
-                <p class="text-gray-600">$110 / night average</p>
-                <div class="mt-4">
-                  <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">Explore 43 properties</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-              <img class="h-32 w-32 flex-shrink-0" src="/img/medellin.jpg" alt="Medellin">
-              <div class="px-6 py-4">
-                <h3 class="text-lg font-semibold text-green-800">Medellin</h3>
-                <p class="text-gray-600">$120 / night average</p>
-                <div class="mt-4">
-                  <a href="#" class="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">Explore 63 properties</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -109,8 +38,52 @@
 </template>
 
 <script>
+import DestinationCard from '@/components/DestinationCard'
 
 export default {
-  name: 'home',
+  name: 'workcation',
+  components: { DestinationCard },
+  data() {
+    return {
+      destinations: [
+        {
+          city: 'Toronto',
+          averagePrice: 120,
+          propertyCount: 76,
+          imageUrl: '/img/toronto.jpg'
+        },
+        {
+          city: 'Malibu',
+          averagePrice: 70,
+          propertyCount: 64,
+          imageUrl: '/img/malibu.jpg'
+        },
+        {
+          city: 'Seattle',
+          averagePrice: 140,
+          propertyCount: 75,
+          imageUrl: '/img/seattle.jpg'
+        },
+        {
+          city: 'Colorado',
+          averagePrice: 85,
+          propertyCount: 90,
+          imageUrl: '/img/colorado.jpeg'
+        },
+        {
+          city: 'Tokyo',
+          averagePrice: 95,
+          propertyCount: 48,
+          imageUrl: '/img/tokyo.jpg'
+        },
+        {
+          city: 'Medellin',
+          averagePrice: 65,
+          propertyCount: 42,
+          imageUrl: '/img/medellin.jpg'
+        }
+      ]
+    }
+  }
 }
 </script>

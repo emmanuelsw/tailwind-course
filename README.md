@@ -1,4 +1,4 @@
-# tailwind-course-vue
+# Tailwind CSS Course
 
 ## Project setup
 ```
