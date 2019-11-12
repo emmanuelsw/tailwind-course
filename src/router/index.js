@@ -13,6 +13,11 @@ const routes = [
     path: '/card',
     name: 'card',
     component: () => import('../views/Card.vue')
+  },
+  {
+    path: '/navbar',
+    name: 'navbar',
+    component: () => import('../views/Navbar.vue')
   }
 ]
 
