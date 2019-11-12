@@ -18,7 +18,12 @@ const routes = [
     path: '/navbar',
     name: 'navbar',
     component: () => import('../views/Navbar.vue')
-  }
+  },
+  {
+    path: '/dropdown',
+    name: 'dropdown',
+    component: () => import('../views/Dropdown.vue')
+  },
 ]
 
 const router = new VueRouter({
