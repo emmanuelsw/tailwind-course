@@ -1,10 +1,12 @@
 <template>
-  <div class="">
-    <img class="h-64 w-full object-cover rounded-lg shadow-md" :src="property.imageUrl" :alt="property.imageAlt">
+  <div>
+    <div class="relative pb-5/6">
+      <img class="absolute h-full w-full object-cover rounded-lg shadow-md" :src="property.imageUrl" :alt="property.imageAlt">
+    </div>
     <div class="relative px-4 -mt-16">
-      <div class="p-6 bg-white rounded-lg shadow-lg">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
         <div class="flex items-baseline">
-          <span class="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full uppercase font-semibold tracking-wide">New</span>
+          <span class="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">New</span>
           <div class="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
             {{ property.beds }} beds &bull; {{ property.baths }} baths
           </div>

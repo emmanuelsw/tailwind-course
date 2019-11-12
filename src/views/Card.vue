@@ -1,6 +1,8 @@
 <template>
-  <div class="bg-gray-200 min-h-screen p-8 flex items-center justify-center antialiased text-gray-900">
-    <PropertyCard :property="property"/>
+  <div id="app" class="antialiased text-gray-900">
+    <div class="bg-gray-200 min-h-screen p-16 flex flex-col justify-center">
+      <PropertyCard :property="property"/>
+    </div>
   </div>
 </template>
 
@@ -15,7 +17,7 @@ export default {
   data() {
     return {
       property: {
-        imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
         imageAlt: 'Rear view of modern home with pool',
         beds: 3,
         baths: 2,
