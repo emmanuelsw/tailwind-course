@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+  <header class="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-8 sm:py-3">
     <div class="flex items-center justify-between px-4 py-3 sm:p-0">
       <div>
         <img class="h-8" src="/img/logo-inverted.svg" alt="Workcation">
@@ -15,7 +15,7 @@
     </div>
     <nav :class="isOpen ? 'block' : 'hidden'" class="sm:block">
       <div class="px-2 pt-2 pb-4 sm:flex sm:p-0">
-        <a href="#" class="block px-2 py-1 text-white font-semibold hover:bg-gray-800 rounded">List your property</a>
+        <a href="#" class="block px-2 py-1 text-white font-semibold hover:bg-gray-800 rounded">My Properties</a>
         <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold hover:bg-gray-800 rounded sm:mt-0 sm:ml-2">Trips</a>
         <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold hover:bg-gray-800 rounded sm:mt-0 sm:ml-2">Messages</a>
         <AccountDropdown class="hidden sm:block sm:ml-6"/>
@@ -45,7 +45,7 @@ export default {
   },
   data() {
     return {
-      isOpen: true,
+      isOpen: false,
       imageUrl: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
     }
   }
